@@ -14,14 +14,23 @@ It's a bash script to show a complete DNS lookup of a domain and it might be use
 
 ---
 ## Pre-Requested Packages Installation 
-_for-amazon-linux_
+_For-RedHat-Distributer_
 ```sh
 sudo yum -y install git 
 sudo yum -y install bind-utils
 sudo yum -y install telnet
 sudo yum -y install whois
 ```
+_For-Debian-Distributer_
+```sh
+sudo apt -y install git 
+sudo apt -y install dnsutils
+sudo apt -y install telnet
+sudo apt -y install whois
+```
 
+> Please note that this script doesn't support macOS.
+ 
 ----
 ## How to use this script
 ```sh
