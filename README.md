@@ -44,9 +44,9 @@ bash dt.sh                         #<-------------- On the Sript directory
 
 ## Output
 ```sh
-$ dm geekflare.com
+# dg geekflare.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Dig +trace result for geekflare.com
+Dig +trace result of the geekflare.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 geekflare.com.          30      IN      A       104.27.118.115
 geekflare.com.          30      IN      A       104.27.119.115
@@ -54,7 +54,7 @@ geekflare.com.          86400   IN      DS      2371 13 2 CBAA2018F41B29985DAEDE
 geekflare.com.          172800  IN      NS      olga.ns.cloudflare.com.
 geekflare.com.          172800  IN      NS      todd.ns.cloudflare.com.
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-MX Record Result for geekflare.com
+MX Record Result of the geekflare.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 geekflare.com.          300     IN      MX      10 alt3.aspmx.l.google.com.
 geekflare.com.          300     IN      MX      10 alt4.aspmx.l.google.com.
@@ -62,28 +62,28 @@ geekflare.com.          300     IN      MX      1 aspmx.l.google.com.
 geekflare.com.          300     IN      MX      5 alt1.aspmx.l.google.com.
 geekflare.com.          300     IN      MX      5 alt2.aspmx.l.google.com.
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TXT Record Resutl for geekflare.com
+TXT Record Resutl of the geekflare.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+geekflare.com.          300     IN      TXT     "google-site-verification=MRSwa454qay1S6pwwixzoiZl08kfJfkhiQIslhok3-A"
+geekflare.com.          300     IN      TXT     "ahrefs-site-verification_8eefbd2fe43a8728b6fd14a393e2aff77b671e41615d2c1c6fc365ec33a4d6d0"
 geekflare.com.          300     IN      TXT     "yandex-verification: 42f25bad396e79f5"
 geekflare.com.          300     IN      TXT     "v=spf1 include:_spf.google.com include:mailgun.org ~all"
 geekflare.com.          300     IN      TXT     "google-site-verification=7QXbgb492Y5NVyWzSAgAScfUV3XIAGTKKZfdpCvcaGM"
-geekflare.com.          300     IN      TXT     "google-site-verification=MRSwa454qay1S6pwwixzoiZl08kfJfkhiQIslhok3-A"
-geekflare.com.          300     IN      TXT     "ahrefs-site-verification_8eefbd2fe43a8728b6fd14a393e2aff77b671e41615d2c1c6fc365ec33a4d6d0"
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-PTR record for 104.27.118.115
+PTR record result of the 104.27.118.115
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Telnet trying connect IP Result for the aspmx.l.google.com
+Telnet trying to connect that IP Result of the alt3.aspmx.l.google.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-IP: 172.217.194.26
+IP:
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Telnet Result for IP: 104.27.118.115 && MX: aspmx.l.google.com >> 25 & 587
+Telnet Result of IP: 104.27.118.115 && MX: alt3.aspmx.l.google.com and checking both 25 & 587
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 IP:
           ------
-MX: 220 mx.google.com ESMTP o188si3854036pfg.65 - gsmtp
+MX:
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-WHOIS Result for the Domain geekflare.com
+WHOIS Result of the geekflare.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    Registrar URL: http://www.cloudflare.com
    Registry Expiry Date: 2025-01-07T14:14:12Z
@@ -91,12 +91,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
    Name Server: OLGA.NS.CLOUDFLARE.COM
    Name Server: TODD.NS.CLOUDFLARE.COM
-Registrar URL: https://www.cloudflare.com
-Registrar Registration Expiration Date: 2025-01-07T14:14:12Z
-Registrar: Cloudflare, Inc.
-Domain Status: clienttransferprohibited https://icann.org/epp#clienttransferprohibited
-Name Server: olga.ns.cloudflare.com
-Name Server: todd.ns.cloudflare.com
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
