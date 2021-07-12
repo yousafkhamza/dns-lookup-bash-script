@@ -13,7 +13,7 @@ It's a bash script to show a complete DNS lookup of a domain and it might be use
 - Including whois details and telnet conncetivity (so need to install both that the packages)
 
 ---
-## Pre-Requested Packages Installation 
+## Pre-Requestes (Packages Installation)
 _For-RedHat-Distributer_
 ```sh
 sudo yum -y install git 
