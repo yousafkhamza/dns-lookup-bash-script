@@ -1,4 +1,4 @@
-# Single DNS lookup script
+# Complete DNS lookup script
 [![Build](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ---
