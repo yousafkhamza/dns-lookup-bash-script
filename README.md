@@ -28,10 +28,6 @@ sudo apt -y install dnsutils
 sudo apt -y install telnet
 sudo apt -y install whois
 ```
-_If you're using amazon-linux-2 please use jwhois and please find the installation command is below_
-```sh
-sudo yum --enablerepo="epel" install jwhois -y
-```
 
 > Please note that this script doesn't support macOS.
  
