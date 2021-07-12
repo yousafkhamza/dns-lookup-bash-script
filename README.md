@@ -29,7 +29,7 @@ sudo apt -y install telnet
 sudo apt -y install whois
 ```
 
-> Please note that this script doesn't support macOS.
+> Please note that this script is not supporting with macOS.
  
 ----
 ## How to use this script
