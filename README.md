@@ -186,7 +186,7 @@ fi
 ----
 ## Conclusion
 
-It's a simple bash script for a complete DNS lookup details in a sing click. I hope it's usefull for who handles with a client support. Please let me know if you are facing any issues while using this script and please find the below contact details who needs to connect me.  
+It's a simple bash script for complete DNS lookup details in a sing click. I hope it's useful for those who handle client support. Please let me know if you are facing any issues while using this script. Also, you guys can to reach me out with the below contact details. 
 
 ### ⚙️ Connect with Me 
 
