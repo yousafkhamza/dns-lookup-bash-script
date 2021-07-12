@@ -4,7 +4,7 @@
 ---
 ## Description
 
-It's a bash script when I was created this for DNS lookup. Because, we need to find a domain complete DNS details and telnet or netcat details where we needs so that's why I created this for who sitted as a client support engineers and I believe it helps for these guys to troubleshoot or easy way to find all the details in a single click.
+It's a bash script when I was created this for DNS lookup. Because, we need to find a domain complete DNS details and telnet or netcat details where we needs so that's why I created this for who handles as a client support engineers and I believe it helps for these guys to troubleshoot or easy way to find all the details in a single click.
 
 ----
 ## Feature
@@ -181,7 +181,7 @@ fi
 ----
 ## Conclusion
 
-It's a simple bash script for A complete DNS lookup details in a sing click. I hope it's usefull for who sitted with a client support. Please let me know if you have facing any issues while using this script and please find the below contact details who needs to connect me.  
+It's a simple bash script for A complete DNS lookup details in a sing click. I hope it's usefull for who handles with a client support. Please let me know if you have facing any issues while using this script and please find the below contact details who needs to connect me.  
 
 ### ⚙️ Connect with Me 
 
