@@ -39,7 +39,7 @@ source ~/.bashrc
 ```sh
 dg geekflare.com                   #<--------------- Before set alias
 or 
-bash dt.sh                         #<-------------- On the Sript directory
+bash dt.sh geekflare.com           #<-------------- On the Sript directory
 ```
 
 ## Output
