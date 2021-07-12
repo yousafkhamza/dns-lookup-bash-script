@@ -179,6 +179,11 @@ fi
 - _whois_
 
 ----
+### _DNS Lookup working be like_
+
+![alt text](https://i.ibb.co/Rybf9sQ/dns.png)
+
+----
 ## Conclusion
 
 It's a simple bash script for A complete DNS lookup details in a sing click. I hope it's usefull for who handles with a client support. Please let me know if you have facing any issues while using this script and please find the below contact details who needs to connect me.  
