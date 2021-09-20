@@ -49,27 +49,37 @@ MX=`dig +nocmd $domain mx +noall +answer | grep ^"$domain" | grep MX | awk {'pri
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo  "Telnet trying to connect that IP Result of the $MX"
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+which telnet >/dev/null 2>&1
+if [ $? = 0 ]; then
 echo "IP: `timeout 1 telnet $MX 587 > ~/Try; timeout 1 telnet $MX 25 >> ~/Try; cat ~/Try | grep -v -e '^$'| grep Trying | head -n1 | awk {'print $2'} | rev | cut -c4- |rev; rm -f ~/Try`"
+else
+echo "Please read the README and install telnet package as per your Operating System Repository ie:('yum install telnet')"
+fi
 
 #Netcatch Result for MX 25 & 587
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo  "Telnet Result of IP: $IP && MX: $MX and checking both 25 & 587"
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+which nc >/dev/null 2>&1
+if [ $? = 0 ]; then
 echo "IP: `timeout 3 nc $IP 587 > ~/rre; timeout 1 nc $IP 25 >> ~/rre; cat ~/rre | grep -v -e '^$'| head -n1; rm -f ~/rre`"
 echo "          ------"
 echo "MX: `timeout 3 nc $MX 587 > ~/rre; timeout 1 nc $MX 25 >> ~/rre; cat ~/rre | grep -v -e '^$'| head -n1; rm -f ~/rre`"
+else
+echo "Please read the README and install nc package as per your Operating System Repository ie:('yum install nc')"
+fi
 
-which whois >/dev/null 2>&1; echo $?
-if [ $? = 0 ]; then 
 #WHOIS Result for Domain
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo  "WHOIS Result of the $domain"
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+which whois >/dev/null 2>&1
+if [ $? = 0 ]; then
 whois $domain | grep -E "Registrar:|Registry Expiry Date:|Registrar URL:|Name Server:|Expiration Date:|Status:|URL:"
-echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 else
 echo "Please read the README and install whois package as per your Operating System Repository ie:('yum install whois')"
 fi
+echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 else
 echo "Please enter a valid FQDN. ie:('google.com')"
 fi
