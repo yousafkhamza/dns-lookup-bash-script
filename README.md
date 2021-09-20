@@ -16,17 +16,21 @@ It's a bash script to show a complete DNS lookup of a domain and it might be use
 ## Pre-Requestes (Packages Installation)
 _For-RedHat-Distributer_
 ```sh
+sudo yum update
 sudo yum -y install git 
 sudo yum -y install bind-utils
 sudo yum -y install telnet
 sudo yum -y install whois
+sudo yum -y install nc
 ```
 _For-Debian-Distributer_
 ```sh
+sudo apt update
 sudo apt -y install git 
 sudo apt -y install dnsutils
 sudo apt -y install telnet
 sudo apt -y install whois
+sudo apt -y install nc
 ```
 
 > Please note that this script is not supporting with macOS.
