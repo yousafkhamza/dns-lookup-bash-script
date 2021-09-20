@@ -59,6 +59,8 @@ echo "IP: `timeout 3 nc $IP 587 > ~/rre; timeout 1 nc $IP 25 >> ~/rre; cat ~/rre
 echo "          ------"
 echo "MX: `timeout 3 nc $MX 587 > ~/rre; timeout 1 nc $MX 25 >> ~/rre; cat ~/rre | grep -v -e '^$'| head -n1; rm -f ~/rre`"
 
+which whois >/dev/null 2>&1; echo $?
+if [ $? = 0 ]; then 
 #WHOIS Result for Domain
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo  "WHOIS Result of the $domain"
@@ -66,5 +68,8 @@ echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 whois $domain | grep -E "Registrar:|Registry Expiry Date:|Registrar URL:|Name Server:|Expiration Date:|Status:|URL:"
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 else
-echo "Please enter a valid FQDN. eg:('google.com')"
+echo "Please read the README and install whois package as per your Operating System Repository ie:('yum install whois')"
+fi
+else
+echo "Please enter a valid FQDN. ie:('google.com')"
 fi
