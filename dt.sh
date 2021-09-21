@@ -1,16 +1,6 @@
 #!/bin/bash
 
-domain=$1
-if [ -z "$domain" ]
-then
-        echo "Please specify a FQDN. eg:('google.com')"
-        exit 1
-elif [[ "$domain" =~ ^http://* ]] || [[ "$domain" =~ ^https://* ]]
-then
-        echo "Please specify a FQDN without Protocol and Symbols. eg:('google.com')"
-        exit 1
-elif grep -oP '^((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+[A-Za-z]{2,6}$' <<< "$domain" >/dev/null 2>&1;
-then
+function dig_domain () {
 #dig +trace domain
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo "Dig +trace result of the $domain"
@@ -80,6 +70,28 @@ else
 echo "Please read the README and install whois package as per your Operating System Repository ie:('yum install whois')"
 fi
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+
+domain=$1
+if [ -z "$domain" ]
+then
+        echo "Please specify a FQDN. eg:('google.com')"
+        exit 1
+elif [[ "$domain" =~ ^http://* ]] || [[ "$domain" =~ ^https://* ]]
+then
+        domain=$(echo "$1"| cut -d: -f2 | sed 's/[<>/:]//g')
+        if grep -oP '^((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+[A-Za-z]{2,6}$' <<< "$domain" >/dev/null 2>&1;
+        then
+            echo "Your domain name look like this: $domain"
+            sleep 2
+            dig_domain
+            exit 1
+        else
+            echo "Please re-run the script with a valid FQDN without Protocol ie:('google.com')"
+        fi
+elif grep -oP '^((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+[A-Za-z]{2,6}$' <<< "$domain" >/dev/null 2>&1;
+then
+dig_domain
 else
 echo "Please enter a valid FQDN. ie:('google.com')"
 fi
