@@ -38,7 +38,7 @@ sudo apt -y install nc
 ----
 ## How to use this script
 ```sh
-git clone https://github.com/yousafkhamza/dns-lookup-bash-script.git
+git clone https://github.com/yousafkhamza/dns-lookup-bash-script
 cd dns-lookup-bash-script
 chmod +x dt.sh
 ```
